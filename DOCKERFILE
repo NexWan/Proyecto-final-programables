@@ -2,9 +2,8 @@
 FROM postgres:latest
 
 # Set environment variables for PostgreSQL
-ENV POSTGRES_USER=myuser
-ENV POSTGRES_PASSWORD=mypassword
-ENV POSTGRES_DB=mydatabase
+ENV POSTGRES_USER=wan
+ENV POSTGRES_PASSWORD=Olakase45
 
 # Copy the SQL script to initialize the database
 COPY init.sql /docker-entrypoint-initdb.d/
