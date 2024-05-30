@@ -1,4 +1,3 @@
-import { env } from 'bun'
 import {Pool} from 'pg'
 
 const connection = new Pool({

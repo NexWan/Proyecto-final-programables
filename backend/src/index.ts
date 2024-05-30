@@ -1,5 +1,6 @@
 import connection from "./db";
 import { Elysia } from "elysia";
+import { cors } from "@elysiajs/cors";
 
 connection.connect();
 
@@ -22,6 +23,7 @@ async function queryAllBasureros(){
 
 const app = new Elysia()
       .use(api)
+      .use(cors())
       .get("/", () => "Hello Elysia")
       .listen(3000);
 
