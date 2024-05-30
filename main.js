@@ -16,6 +16,7 @@ function createWindow() {
     win.on('closed', () => {
         win = null;
     });
+    win.setMenu(null);  
 }
 app.on('ready', createWindow);
 // Salir cuando todas las ventanas estén cerradas.
@@ -24,3 +25,4 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 });
+
