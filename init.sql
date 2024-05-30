@@ -1,12 +1,14 @@
 CREATE DATABASE basurero with owner = 'wan';
+SET timezone = 'UTC';
 
 \c basurero;
 
 CREATE TABLE BasureroTable (
     id SERIAL PRIMARY KEY,
-    fechaactualizacion DATE,
+    fechaactualizacion TIMESTAMPTZ,
     lleno INT,
     nombre_basurero VARCHAR(255)
 );
 
-insert into BasureroTable (fechaactualizacion, lleno, nombre_basurero) values ('2021-01-01', 0, 'Basurero 1');
+INSERT INTO BasureroTable (fechaactualizacion, lleno, nombre_basurero) 
+VALUES (TO_TIMESTAMP('01-01-2021:00-00-00', 'DD-MM-YYYY:HH24-MI-SS') AT TIME ZONE 'UTC', 0, 'Basurero 1');
