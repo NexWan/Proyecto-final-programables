@@ -19,6 +19,8 @@ export class MenuComponent {
   contenedor:any = "hola mundo"
 
   basureros: basurero[] = [];
+
+  fechaactualizacion: string = '';
   
   constructor(private config: ConfigService, private route: ActivatedRoute, private router: Router) {}
 
@@ -28,6 +30,7 @@ export class MenuComponent {
       sessionStorage.setItem('prevLleno', data[0].lleno.toString());
       this.basureros = data;
       this.contenedor = data[0].nombre_basurero;
+      this.fechaactualizacion = data[0].fechaactualizacion;
       return data[0];
     });
   }
@@ -41,6 +44,7 @@ export class MenuComponent {
       if(sessionStorage.getItem('prevLleno') !== lleno.toString()){
         this.contenedor = data[0].nombre_basurero;
         this.basureros = data;
+        this.fechaactualizacion = data[0].fechaactualizacion;
         sessionStorage.setItem('prevLleno', lleno.toString());
       }
     });
