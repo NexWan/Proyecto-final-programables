@@ -15,3 +15,25 @@ docker build -t postgresql-basurero .
 ```sh
 bun run src/index.ts
 ```
+
+
+## Fotos del proyecto
+### Protipo del contenedor
+<img src='imagesForGit/container4.png'>  
+
+### Aplicacion desarrollada  
+<img src='imagesForGit/container2.png'>  
+
+### Fotos de la aplicacion funcionando en consola
+<img src='imagesForGit/container3.png'>  
+<img src='imagesForGit/container5.png'>  
+<img src='imagesForGit/container6.png'>  
+<img src='imagesForGit/container7.png'>  
+<img src='imagesForGit/container8.png'>  
+
+
+## Shoutout a Ramses
+
+Siganlo en [git](https://github.com/RamMaths).  
+[Repositorio](https://github.com/NexWan/iot-container) forkeado de ramses que modifique un poco para el ESP-32
+
